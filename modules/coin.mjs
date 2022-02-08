@@ -79,7 +79,10 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-
+  let output = { call: call, flip: "", result: "" };
+  output.flip = coinFlip();
+  output.result = output.flip === call;
+  return output;
 }
 
 
