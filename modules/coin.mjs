@@ -39,7 +39,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-
+  let result = [];
+  for (let i = 0; i < flips; i++) {
+    result[i] = coinFlip();
+  }
+  return result;
 }
 
 /** Count multiple flips
