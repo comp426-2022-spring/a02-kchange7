@@ -15,7 +15,8 @@
  */
 
 function coinFlip() {
-
+  let num = Math.random() * 2;
+  return num >= 1 ? "heads" : "tails";
 }
 
 /** Multiple coin flips
