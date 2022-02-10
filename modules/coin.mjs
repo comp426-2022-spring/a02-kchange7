@@ -81,7 +81,7 @@ export function countFlips(array) {
 export function flipACoin(call) {
   let output = { call: call, flip: "", result: "" };
   output.flip = coinFlip();
-  output.result = output.flip === call;
+  output.result = output.flip === call ? "win" : "lose";
   return output;
 }
 
