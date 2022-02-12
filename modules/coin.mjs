@@ -60,15 +60,18 @@ export function coinFlips(flips) {
  */
 
 export function countFlips(array) {
-  let counts = {};
+  let heads = 0;
+  let tails = 0;
   for (let i = 0; i < array.length; i++) {
-    if (array[i] == "heads") {
-      counts.heads = counts.heads == null ? 1 : counts.heads + 1;
-    } else {
-      counts.tails = counts.tails == null ? 1 : counts.tails + 1;
-    }
+    array[i] == "heads" ? heads++ : tails++
   }
-  return counts;
+  if (heads == 0) {
+    return { tails: tails };
+  } else if (tails == 0) {
+    return { heads: heads };
+  } else {
+    return { heads: heads, tails: tails };
+  }
 }
 
 /** Flip a coin!
