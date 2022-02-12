@@ -63,9 +63,9 @@ export function countFlips(array) {
   let counts = {};
   for (let i = 0; i < array.length; i++) {
     if (array[i] == "heads") {
-      counts.heads = counts.heads == null ? 1 : counts.heads++;
+      counts.heads = counts.heads == null ? 1 : counts.heads + 1;
     } else {
-      counts.tails = counts.tails == null ? 1 : counts.tails++
+      counts.tails = counts.tails == null ? 1 : counts.tails + 1;
     }
   }
   return counts;
