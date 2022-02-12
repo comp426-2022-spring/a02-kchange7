@@ -62,7 +62,7 @@ export function coinFlips(flips) {
 export function countFlips(array) {
   let counts = {};
   for (let i = 0; i < array.length; i++) {
-    array[i] == "heads" ? !counts.heads ? 1 : counts.heads++ : !count.tails ? 1 : counts.tails++;
+    array[i] == "heads" ? (!counts.heads ? 1 : counts.heads++) : (!counts.tails ? 1 : counts.tails++);
   }
   return counts;
 }
