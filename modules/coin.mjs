@@ -60,9 +60,9 @@ export function coinFlips(flips) {
  */
 
 export function countFlips(array) {
-  let counts = { tails: 0, heads: 0 };
+  let counts = {};
   for (let i = 0; i < array.length; i++) {
-    array[i] == "heads" ? counts.heads++ : counts.tails++;
+    array[i] == "heads" ? !counts.heads ? 1 : counts.heads++ : !count.tails ? 1 : counts.tails++;
   }
   return counts;
 }
